@@ -1,5 +1,5 @@
- <H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+ <H3>ENTER YOUR NAME:K.Jhansi</H3>
+<H3>ENTER YOUR REGISTER NO:212221230045</H3>
 <H3>EX. NO.8</H3>
 <H3>DATE:</H3>
 <H1 ALIGN =CENTER>Implementation of Speech Recognition</H1>
@@ -22,9 +22,32 @@ Step 11: Perform speech recognition with exceptional handling:<Br>
 •	A generic exception block captures any other unexpected errors.<Br>
 <H3>Program:</H3>
 
-Insert your code her
+```
+import speech_recognition as sr
+r = sr.Recognizer()
+duration = 30
+print("Say something")
+with sr.Microphone() as source:
+    audio_data = r.listen(source,timeout=duration)
+
+try:
+    text= r.recognize_google(audio_data)
+except sr.UnknownValueError:
+    print("Sorry, couldn't understand the audio")
+except sr.RequestError as e:
+    print(f'Error with request tp Google Speech Recognition service: {e}')
+except Exception as e:
+    print(f'Error : {e}')
+
+
+
+
+```
+
+
 
 <H3> Output:</H3>
-Show the results here
+![output]()
 
 <H3> Result:</H3>
+Thus the python program for Speech Recognition is implemented successfully.
