@@ -47,7 +47,10 @@ except Exception as e:
 
 
 <H3> Output:</H3>
+
+
 ![output](https://github.com/jhansi21005096/Ex-8--AAI/blob/main/ouuut.png)
+
 
 <H3> Result:</H3>
 Thus the python program for Speech Recognition is implemented successfully.
